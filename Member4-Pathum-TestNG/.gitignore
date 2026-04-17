@@ -1,0 +1,40 @@
+# ─────────────────────────────────────────────────
+# Member4 – Pathum – TestNG (Maven / Java)
+# ─────────────────────────────────────────────────
+
+# Maven build output
+target/
+
+# Compiled class files
+*.class
+
+# JAR / WAR artifacts
+*.jar
+*.war
+
+# Surefire & Failsafe test reports (auto-generated)
+surefire-reports/
+failsafe-reports/
+
+# TestNG output directory
+test-output/
+
+# Screenshots captured during test runs
+screenshots/
+
+# IDE – IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# IDE – Eclipse
+.project
+.classpath
+.settings/
+bin/
+
+# OS
+.DS_Store
+Thumbs.db

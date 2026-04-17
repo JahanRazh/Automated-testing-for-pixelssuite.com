@@ -1,0 +1,13 @@
+{
+  "name": "pixelssuite-playwright-tests",
+  "version": "1.0.0",
+  "description": "Playwright E2E tests for pixelssuite.com — Member 1: Jayalath",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:report": "playwright test --reporter=html && playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.43.0"
+  }
+}
