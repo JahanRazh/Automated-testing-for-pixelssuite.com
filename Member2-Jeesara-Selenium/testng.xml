@@ -5,6 +5,8 @@
     <classes>
       <class name="CropJpgPageTest"/>
       <class name="FooterTest"/>
+      <class name="ConvertImagePageTest"/>
+      <class name="GifCompressorValidationTest"/>
     </classes>
   </test>
 </suite>  
