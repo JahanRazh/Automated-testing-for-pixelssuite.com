@@ -10,8 +10,8 @@
 | Member | Framework | Language | Folder |
 |--------|-----------|----------|--------|
 | **Jayalath** | Playwright | JavaScript | `Member1-Jayalath-Playwright/` |
-| **Reshmi** | Selenium WebDriver | Java (Maven + TestNG) | `Member2-Reshmi-Selenium/` |
-| **Jeesara** | Cypress | JavaScript | `Member3-Jeesara-Cypress/` |
+| **Jeesara** | Selenium WebDriver | Java (Maven + TestNG) | `Member2-Jeesara-Selenium/` |
+| **Reshmi** | Cypress | JavaScript | `Member3-Reshmi-Cypress/` |
 | **Pathum** | TestNG + Selenium | Java (Maven) | `Member4-Pathum-TestNG/` |
 
 ---
