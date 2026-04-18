@@ -1,0 +1,14 @@
+{
+  "name": "pixelssuite-cypress-tests",
+  "version": "1.0.0",
+  "description": "Cypress E2E tests for pixelssuite.com — Member 3: Reshmi",
+  "scripts": {
+    "test": "cypress run",
+    "test:open": "cypress open",
+    "test:chrome": "cypress run --browser chrome",
+    "test:resize": "cypress run --spec 'cypress/e2e/resize_page.cy.js'"
+  },
+  "devDependencies": {
+    "cypress": "^13.8.1"
+  }
+}
