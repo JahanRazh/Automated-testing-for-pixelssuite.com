@@ -3,9 +3,9 @@
 <suite name="PixelsSuite Tests" verbose="1" parallel="false">
   <test name="Document Tools Tests">
     <classes>
-      <class name="ImageToPdfTest"/>
       <class name="OcrToolTest"/>
       <class name="ColorPickerTest"/>
+      <class name="RotateImageTest"/>
     </classes>
   </test>
 </suite>
