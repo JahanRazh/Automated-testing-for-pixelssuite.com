@@ -63,7 +63,7 @@ npx playwright show-report
 
 ---
 
-## 🔵 Member 2 — Reshmi | Selenium WebDriver (Java)
+## 🔵 Member 2 — Jeesara | Selenium WebDriver (Java)
 
 ### Prerequisites
 - Java JDK 11+ → https://adoptium.net
@@ -72,7 +72,7 @@ npx playwright show-report
 
 ### Setup
 ```bash
-cd Member2-Reshmi-Selenium
+cd Member2-Jeesara-Selenium
 mvn test
 ```
 
@@ -89,14 +89,14 @@ mvn test -Dtest=CropJpgPageTest
 
 ---
 
-## 🌲 Member 3 — Jeesara | Cypress
+## 🌲 Member 3 — Reshmi | Cypress
 
 ### Prerequisites
 - Node.js 18+ → https://nodejs.org
 
 ### Setup
 ```bash
-cd Member3-Jeesara-Cypress
+cd Member3-Reshmi-Cypress
 npm install
 ```
 
