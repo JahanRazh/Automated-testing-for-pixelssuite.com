@@ -14,7 +14,7 @@ import java.util.List;
 
 /**
  * Test Suite: Footer — Links, Email, Social Media
- * Member: Reshmi | Framework: Selenium WebDriver + TestNG
+ * Member: jeesara | Framework: Selenium WebDriver + TestNG
  * Target URL: https://www.pixelssuite.com (any page)
  */
 public class FooterTest {

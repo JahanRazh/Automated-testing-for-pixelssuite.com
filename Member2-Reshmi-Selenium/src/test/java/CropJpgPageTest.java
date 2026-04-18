@@ -13,7 +13,7 @@ import java.time.Duration;
 
 /**
  * Test Suite: Crop JPG Page — UI & Functional Tests
- * Member: Reshmi | Framework: Selenium WebDriver + TestNG
+ * Member: jeesara | Framework: Selenium WebDriver + TestNG
  * Target URL: https://www.pixelssuite.com/crop-image
  */
 public class CropJpgPageTest {

@@ -7,10 +7,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.pixelssuite.tests</groupId>
-    <artifactId>reshmi-selenium-tests</artifactId>
+    <artifactId>jeesara-selenium-tests</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
-    <name>PixelsSuite Selenium Tests - Reshmi</name>
+    <name>PixelsSuite Selenium Tests - jeesara</name>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
