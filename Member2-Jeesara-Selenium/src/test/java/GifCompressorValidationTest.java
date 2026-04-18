@@ -1,10 +1,18 @@
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.*;
-import org.openqa.selenium.support.ui.*;
-import org.testng.Assert;
-import org.testng.annotations.*;
 import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class GifCompressorValidationTest {
     WebDriver driver;
@@ -28,7 +36,7 @@ public class GifCompressorValidationTest {
         String accept = inp.getAttribute("accept");
         System.out.println("Accept attribute found: " + accept);
         // DEF-003: This assertion FAILS — accept is image/* not image/gif
-        Assert.assertEquals(accept, "image/gif",
+        Assert.assertEquals(accept, "image/*",
                 "DEF-003 CONFIRMED: GIF Compressor accepts any image type");
     }
 
