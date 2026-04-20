@@ -38,7 +38,7 @@ test('PixelsSuite Bulk Resize', async ({ page }) => {
 });
 
 // Test 2
-// Upload multiple images → click "Process & Download" → assert ZIP or individual files downloaded
+// Upload multiple images → click "Process & Download" → assert ZIP is downloaded
 test('Bulk Resize — Process & Download should download a ZIP file', async ({ page }) => {
   await page.goto('https://www.pixelssuite.com/bulk-resize', {
     waitUntil: 'domcontentloaded',
@@ -83,7 +83,7 @@ test('Bulk Resize — Process & Download should download a ZIP file', async ({ p
   // 5. Assert at least one download occurred 
   expect(downloads.length).toBeGreaterThanOrEqual(1);
 
-  // 6. Assert the download is a ZIP file 
+  // 6. Assert the download is a ZIP file
   const filenames = downloads.map((dl) => dl.suggestedFilename().toLowerCase());
   const zipFile = filenames.find((name) => name.endsWith('.zip'));
 
@@ -91,4 +91,41 @@ test('Bulk Resize — Process & Download should download a ZIP file', async ({ p
     zipFile,
     `Expected a .zip download but got: [${filenames.join(', ')}]`
   ).toBeTruthy();
+});
+
+// Test 3
+// Upload a file >20MB -> assert error message is displayed
+test('Bulk Resize — Should show error when file >20MB', async ({ page }) => {
+  await page.goto('https://www.pixelssuite.com/bulk-resize', {
+    waitUntil: 'domcontentloaded',
+  });
+
+  let dialogMessage = '';
+  page.on('dialog', async (dialog) => {
+    dialogMessage = dialog.message();
+    await dialog.dismiss();
+  });
+
+  const fileInput = page.locator('input[type="file"]').first();
+  await expect(fileInput).toBeAttached({ timeout: 10000 });
+
+  // Create a 21MB dummy file
+  const largeBuffer = Buffer.alloc(21 * 1024 * 1024, 'a');
+
+  await fileInput.setInputFiles({
+    name: 'large_image.png',
+    mimeType: 'image/png',
+    buffer: largeBuffer,
+  });
+
+  // Wait briefly for dialog or DOM update
+  await page.waitForTimeout(2000);
+
+  if (dialogMessage) {
+    expect(dialogMessage).toMatch(/exceed|too large|20mb|limit/i);
+  } else {
+    // Verify an error message is displayed (excluding the static 'Max 20MB' text)
+    const errorMessage = page.locator('text=/exceed|too large/i').first();
+    await expect(errorMessage).toBeVisible({ timeout: 5000 });
+  }
 });
