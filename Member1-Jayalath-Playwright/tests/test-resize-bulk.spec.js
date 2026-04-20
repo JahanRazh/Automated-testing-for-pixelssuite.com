@@ -38,7 +38,7 @@ test('PixelsSuite Bulk Resize', async ({ page }) => {
 });
 
 // Test 2
-// Upload multiple images → click "Process & Download" → assert ZIP is downloaded
+// Upload multiple images → click "Process & Download" → assert ZIP or individual files downloaded
 test('Bulk Resize — Process & Download should download a ZIP file', async ({ page }) => {
   await page.goto('https://www.pixelssuite.com/bulk-resize', {
     waitUntil: 'domcontentloaded',
