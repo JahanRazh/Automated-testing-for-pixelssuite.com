@@ -1,11 +1,5 @@
-// @ts-check
-const { test, expect } = require('@playwright/test');
 
-/**
- * Test Suite: Image Enlarger Page
- * Member: Jayalath | Framework: Playwright
- * Tests: Page load, heading, UI elements, navigation from menu
- */
+const { test, expect } = require('@playwright/test');
 
 test('Image Enlarger page elements present', async ({ page }) => {
   await page.goto('https://www.pixelssuite.com/image-enlarger');

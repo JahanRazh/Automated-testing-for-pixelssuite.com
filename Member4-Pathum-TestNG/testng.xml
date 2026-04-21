@@ -1,11 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="PixelsSuite Tests" verbose="1" parallel="false">
-  <test name="Document Tools Tests">
+<suite name="PixelsSuite Comprehensive Test Suite" verbose="2" parallel="tests" thread-count="2">
+  <listeners>
+    <listener class-name="org.testng.reporters.TestHTMLReporter"/>
+    <listener class-name="org.testng.reporters.jq.Main"/>
+  </listeners>
+
+  <!-- Image Processing Tools Tests -->
+  <test name="Image Processing Tools">
     <classes>
-      <class name="OcrToolTest"/>
-      <class name="ColorPickerTest"/>
+      <class name="ResizeImageTest"/>
+      <class name="CompressImageTest"/>
+      <class name="CropImageTest"/>
+      <class name="ImageConverterTest"/>
+    </classes>
+  </test>
+
+  <!-- Image Manipulation Tools Tests -->
+  <test name="Image Manipulation Tools">
+    <classes>
       <class name="RotateImageTest"/>
+      <class name="ColorPickerTest"/>
+      <class name="OcrToolTest"/>
+    </classes>
+  </test>
+
+  <!-- Document Processing Tools Tests -->
+  <test name="Document Processing Tools">
+    <classes>
+      <class name="PDFConverterTest"/>
+    </classes>
+  </test>
+
+  <!-- Text Processing Tools Tests -->
+  <test name="Text Processing Tools">
+    <classes>
+      <class name="TransliterationTest"/>
+    </classes>
+  </test>
+
+  <!-- Additional/Utility Tools Tests -->
+  <test name="Additional Tools">
+    <classes>
+      <class name="AdditionalToolsTest"/>
     </classes>
   </test>
 </suite>
