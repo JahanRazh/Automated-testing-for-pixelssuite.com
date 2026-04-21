@@ -36,7 +36,7 @@ public class GifCompressorValidationTest {
         String accept = inp.getAttribute("accept");
         System.out.println("Accept attribute found: " + accept);
         // DEF-003: This assertion FAILS — accept is image/* not image/gif
-        Assert.assertEquals(accept, "image/*",
+        Assert.assertEquals(accept, "image/*
                 "DEF-003 CONFIRMED: GIF Compressor accepts any image type");
     }
 

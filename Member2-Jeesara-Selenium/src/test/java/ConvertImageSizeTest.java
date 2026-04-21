@@ -26,21 +26,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-/**
- * ConvertImageSizeTest
- * ---------------------
- * TC-S01: Upload a 25 MB file (above the site's stated 20 MB limit)
- *         and assert that an error/size-limit message is displayed.
- *
- * The site (pixelssuite.com/convert-to-jpg) advertises a 20 MB max
- * file size. When a file larger than 20 MB is uploaded the site
- * SHOULD reject it with an error message.
- *
- * EXPECTED  → Error message visible                 → TEST PASSES
- * ACTUAL    → No error, file silently accepted      → TEST FAILS  ← BUG
- *
- * Report → test-reports/ConvertImageSizeTest.html
- */
+
 public class ConvertImageSizeTest {
 
     WebDriver     driver;
