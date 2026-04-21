@@ -8,6 +8,8 @@
       <class name="CompressImagePageTest"/>
       <class name="CompressFunctionalityTest"/>
       <class name="ConvertFunctionalityTest"/>
+      <class name="ConvertImageSizeTest"/>
     </classes>
   </test>
-</suite>  
+</suite>
+
