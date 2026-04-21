@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Reshmi Selenium Tests" verbose="1" parallel="false">
+<suite name="Jeesara Selenium Tests" verbose="1" parallel="false">
   <test name="PixelsSuite UI Tests">
     <classes>
       <class name="ConvertImagePageTest"/>
       <class name="GifCompressorValidationTest"/>
+      <class name="CompressImagePageTest"/>
+      <class name="CompressFunctionalityTest"/>
+      <class name="ConvertFunctionalityTest"/>
     </classes>
   </test>
 </suite>  

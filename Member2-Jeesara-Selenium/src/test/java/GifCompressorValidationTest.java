@@ -22,7 +22,7 @@ public class GifCompressorValidationTest {
     public void setUp() {
         WebDriverManager.chromedriver().setup();
         ChromeOptions opts = new ChromeOptions();
-        opts.addArguments("--headless", "--disable-gpu");
+        opts.addArguments("--start-maximized");
         driver = new ChromeDriver(opts);
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
